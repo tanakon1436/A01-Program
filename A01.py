@@ -20,9 +20,10 @@ def Work():
         print('        Welcome to A01 Program!')
         print('What program do you want to use today?(1-10)')
         print('1. BMI')
-        print('###### or ######')
+        print('------ or ------')
         print('e. Exit')
         print('d. Description')
+        print('----------------')
         user_input = input('Enter Number: ')
         print()
         #Exit function
@@ -56,7 +57,7 @@ def Work():
             print()
         #Description 
         elif user_input == 'd':
-            print('###### Description ######')
+            print('------ Description ------')
             print('Welcome to A01 Program !' )
             print('This Program Developed in: 17/05/2024')
             print('Developer: Tanakon Panapong' )
