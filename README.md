@@ -1,5 +1,4 @@
 # A01-Program
-Hello Welcome to A01 Program!
 This Program Developed in: 17/05/2024
 Developer: Tanakon Panapong
 Language: Python
