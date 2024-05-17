@@ -20,6 +20,7 @@ def Work():
         print('        Welcome to A01 Program!')
         print('What program do you want to use today?(1-10)')
         print('1. BMI')
+        print('###### or ######')
         print('e. Exit')
         print('d. Description')
         user_input = input('Enter Number: ')
