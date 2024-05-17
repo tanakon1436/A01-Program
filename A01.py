@@ -2,11 +2,20 @@ import tkinter as tk
 from tkinter import messagebox
 import time
 import sys
-# Global variable to track the admin status
-admin = True
+import subprocess
+import os
+# set status for testing if want login page set admin = False
+admin = False
 
+#to make terminal clean before use the program
+def Clear_screen():
+    if os.name == 'posix':  # For Unix/Linux/MacOS
+        _ = subprocess.run(['clear'], shell=True)
+    elif os.name == 'nt':  # For Windows
+        _ = subprocess.run(['cls'], shell=True)
 # Function to perform work after GUI is hidden
 def Work():
+    Clear_screen()
     while True:
         print('        Welcome to A01 Program!')
         print('What program do you want to use today?(1-10)')
@@ -14,6 +23,7 @@ def Work():
         print('e. Exit')
         print('d. Description')
         user_input = input('Enter Number: ')
+        print()
         #Exit function
         if user_input == 'e':
             print('Exiting program', end='', flush=True)
@@ -43,6 +53,7 @@ def Work():
                 bmi_result = '!!!! Fat LV.2 !!!!'
             print('BMI status: ', bmi_result)
             print()
+        #Description 
         elif user_input == 'd':
             print('###### Description ######')
             print('Welcome to A01 Program !' )
@@ -63,7 +74,7 @@ def check_pass():
     user = user_entry.get()
     key = key_entry.get()
     if (user == 'admin') and (key == '12345'):
-        messagebox.showinfo('Success', 'Welcome!')
+        messagebox.showinfo('Success', 'Request Accept go to Terminal..')
         print('Request Accepted')
         root.withdraw()
         Work()
